@@ -1,0 +1,456 @@
+.page {
+  padding-bottom: 32px;
+  font-family: var(--font-food);
+  color: var(--color-food-heading);
+  background: var(--color-white);
+}
+
+.locationBar {
+  height: 60px;
+  padding: 5px 20px 0;
+  border-bottom: 1px solid #e2e2e2;
+  font-family: var(--font-ui);
+  color: #000;
+}
+
+.locationLabel {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.4;
+}
+
+.locationAddress {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px 0;
+}
+
+.nameChip {
+  flex: 0 1 174px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: #fafafa;
+  border-radius: 0 0 20px 20px;
+  font-family: var(--font-ui);
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.5;
+}
+
+.toolbarSpacer {
+  flex: 1;
+  min-width: 8px;
+}
+
+.iconTile {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.iconTilePhone {
+  composes: iconTile;
+  background: linear-gradient(90deg, #ff986d 0%, #ff6e6a 100%);
+}
+
+.iconTileWallet {
+  composes: iconTile;
+  background: linear-gradient(90deg, #83d4f3 0%, #4a70c7 100%);
+}
+
+.iconTile img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.iconTile:focus-visible {
+  outline: 2px solid var(--color-food-accent);
+  outline-offset: 2px;
+}
+
+.apiStatus {
+  margin: 16px 20px 0;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  color: var(--color-secondary-text);
+}
+
+.apiError {
+  margin: 16px 20px 0;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #fef3f2;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  line-height: 1.4;
+  color: #b42318;
+}
+
+.apiRestaurantList {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.apiRestaurantRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--color-food-bg);
+  text-decoration: none;
+  color: var(--color-food-heading);
+}
+
+.apiRestaurantRow:focus-visible {
+  outline: 2px solid var(--color-food-accent);
+  outline-offset: 2px;
+}
+
+.apiRestaurantThumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.apiRestaurantThumbPlaceholder {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: var(--color-peach);
+}
+
+.apiRestaurantName {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.apiRestaurantText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.apiRestaurantAddress {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-secondary-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.sectionTitle {
+  margin: 0 0 14px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color-food-heading);
+}
+
+.bestSellerScroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 0 20px 4px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.bestSellerScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.bestSellerCard {
+  position: relative;
+  flex: 0 0 72px;
+  width: 72px;
+  height: 108px;
+  border-radius: 20px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bestSellerCard:focus-visible {
+  outline: 2px solid var(--color-food-accent);
+  outline-offset: 2px;
+}
+
+.bestSellerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bestSellerImageCrop {
+  width: 182%;
+  height: 121%;
+  max-width: none;
+  object-fit: cover;
+  margin-left: -53%;
+  margin-top: -7%;
+}
+
+.pricePill {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 38px;
+  height: 16px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-food-accent);
+  border-radius: 30px 0 0 30px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--color-white);
+  text-transform: capitalize;
+}
+
+.promoWrap {
+  padding: 0 20px;
+}
+
+.promoBanner {
+  position: relative;
+  width: 100%;
+  max-width: 323px;
+  height: 128px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.promoBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.promoDecoTop {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-10px);
+  pointer-events: none;
+}
+
+.promoDecoBottom {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: -8px;
+  bottom: -8px;
+  pointer-events: none;
+}
+
+.promoPizza {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.promoCopy {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 42%;
+  color: var(--color-food-bg);
+  text-align: center;
+  pointer-events: none;
+}
+
+.promoSubtitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.promoTitle {
+  margin: 6px 0 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carouselDot {
+  width: 20px;
+  height: 4px;
+  border-radius: 12px;
+  border: none;
+  padding: 0;
+  background: #f3e9b5;
+  cursor: default;
+}
+
+.carouselDotActive {
+  background: var(--color-food-accent);
+}
+
+.orderList {
+  padding: 0 20px;
+}
+
+.orderRow {
+  padding: 20px 0;
+  border-bottom: none;
+}
+
+.orderRowInner {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  column-gap: 12px;
+  row-gap: 6px;
+}
+
+.orderThumb {
+  grid-row: 1 / span 3;
+  width: 72px;
+  height: 108px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.orderTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color-food-heading);
+}
+
+.orderMetaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  grid-column: 2;
+}
+
+.orderPrice {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--color-food-accent);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.orderMeta {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  color: var(--color-food-heading);
+}
+
+.orderActions {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.pillButton {
+  height: 26px;
+  padding: 0 12px;
+  border-radius: 100px;
+  font-family: var(--font-food);
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.075px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.pillPrimary {
+  composes: pillButton;
+  background: var(--color-food-accent);
+  border-color: var(--color-food-accent);
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.pillSecondary {
+  composes: pillButton;
+  background: var(--color-peach);
+  color: var(--color-food-accent);
+  font-weight: 400;
+}
+
+.pillOutline {
+  composes: pillButton;
+  background: var(--color-peach);
+  color: var(--color-food-accent);
+  font-weight: 400;
+}
+
+.rowDivider {
+  display: block;
+  width: 100%;
+  max-width: 323px;
+  height: auto;
+  margin: 0 auto;
+}

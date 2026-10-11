@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=League+Spartan:wght@300;400;500;700&family=Mulish:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-auth-text: #292e39;
+  --color-secondary-text: #696969;
+  --color-auth-accent: #fb7632;
+  --color-primary-cta: #ff5701;
+  --color-food-accent: #e95322;
+  --color-food-heading: #391713;
+  --color-food-bg: #f8f8f8;
+  --color-peach: #ffdecf;
+  --color-white: #ffffff;
+
+  --font-auth: 'Mulish', system-ui, sans-serif;
+  --font-food: 'League Spartan', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+
+  --layout-max-width: 375px;
+}

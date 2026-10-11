@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fastor-crm-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: fastor
+      POSTGRES_PASSWORD: fastor_password
+      POSTGRES_DB: fastor_crm
+    ports:
+      - '5432:5432'
+    volumes:
+      - fastor_crm_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U fastor -d fastor_crm']
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  fastor_crm_pgdata:

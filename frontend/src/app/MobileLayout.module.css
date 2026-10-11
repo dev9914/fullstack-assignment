@@ -1,0 +1,21 @@
+.shell {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  background: var(--color-white);
+}
+
+.frame {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.frameScroll {
+  composes: frame;
+  overflow-y: auto;
+}
